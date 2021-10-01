@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using  namespace std;
 
-long long dp[20][20]; // guardar las respuesta ya calculadas
+long long dp[25][25]; // guardar las respuesta ya calculadas
 
 
 /* complejidad de eso ses estados * transicion
@@ -25,11 +25,11 @@ long long dp[20][20]; // guardar las respuesta ya calculadas
 
 long long SuperSuma(int k, int n){
     if(k == 0)
-        return n;
-    long long ans = 0;
-    if(dp[k][n] != 0)
+        return dp[k][n] = n;
+    if(dp[k][n] != -1)
         return dp[k][n];
 
+    long long ans = 0;
     for(int i = 1; i <= n; i++){
         ans += SuperSuma(k - 1, i);
     }
@@ -43,6 +43,8 @@ int main(){
     cin.tie(0); cout.tie(0);
     int k, n;
     while(cin >> k >> n){
+
+        memset(dp, -1, sizeof dp);
         cout << SuperSuma(k, n) << '\n';
     }
 
