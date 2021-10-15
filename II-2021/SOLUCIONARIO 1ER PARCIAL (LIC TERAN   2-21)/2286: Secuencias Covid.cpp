@@ -1,3 +1,5 @@
+// https://jv.umsa.bo/problem.php?id=2286
+
 #include <bits/stdc++.h>
 
 using namespace std;
