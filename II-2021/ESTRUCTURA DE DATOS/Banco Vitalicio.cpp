@@ -14,15 +14,18 @@ int main(){
     while(cin >> n >> m >> p){
         priority_queue< pair<int, char> > q;
 
-        while(n--){
+        // O(n log n)
+        while(n--){                 
             int t;
             char op;
             cin >> t >> op;
-            q.push({ -t , op });
+            q.push({ -t , op });  
         }
 
         int tiempo = -q.top().first;
 
+
+        // O(n log n)
         while(not q.empty()){
             tiempo += p;
             if(tiempo <= m)
