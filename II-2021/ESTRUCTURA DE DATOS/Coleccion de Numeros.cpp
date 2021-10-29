@@ -20,12 +20,15 @@ int main(){
             q.push(valor);
         }else if(ope == 'I' or ope == 'D'){
             cin >> valor;
-            int mayor = q.top();
-            if(ope == 'D')
-                valor *= -1;
-            mayor += valor;
-            q.pop();
-            q.push(mayor);
+            if(q.size() > 0){
+                int mayor = q.top();
+                if(ope == 'D')
+                    valor *= -1;
+                mayor += valor;
+                q.pop();
+                q.push(mayor);
+            }else
+                cout << "Error\n";
         }else if(ope == 'A'){
             if(q.size() > 0)
                 cout << q.top() << '\n';
