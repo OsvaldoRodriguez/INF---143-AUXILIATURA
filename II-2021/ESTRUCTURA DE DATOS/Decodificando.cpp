@@ -12,7 +12,7 @@ bool ok(string &a){
 
     int mx = max_element(fre.begin(), fre.end()) - fre.begin();
     int cnt = 0;
-    d = abs(5 - mx) + 1;
+    d = (mx - 4 + 26) % 26;
     // cout << char(mx + 'A') << '\n';
     for(int i = 0; i < 26; i++){
         cnt += (fre[mx] == fre[i]);
@@ -38,6 +38,7 @@ int main(){
                     cout << i;
                 else{
                     int ascci = i - 'A';
+                    // cout << "ascci: " << ascci <<
                     ascci = (ascci - d + 26) % 26;
                     cout << char(ascci + 'A');
                 }
