@@ -25,6 +25,21 @@ string A, B;
 
 int dp[1010][1010];
 
+/*
+Complejidad
+
+Tiempo:
+    O(estados * transicion)
+    O(N * N)
+    O(N^2)
+
+espacio:
+    O(N * N)
+    O(N^2)
+
+
+*/
+
 int f(int i, int j){
 
     if(i == n or j == m)
