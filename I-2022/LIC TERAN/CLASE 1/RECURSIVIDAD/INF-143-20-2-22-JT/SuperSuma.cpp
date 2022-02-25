@@ -6,6 +6,17 @@ const int N = 20 + 5;
 
 ll dp[N][N];
 
+/* complejidad de eso ses estados * transicion
+    estados k  y n
+    k, n  <= 20
+    transiciones 
+    n
+    complejidad final O(k * n * n) -> O(k * n ^ 2)
+    k = n
+    O(n ^ 3)
+*/
+
+
 ll super_suma(int k, int n){
     if(k == 0)
         return n;
