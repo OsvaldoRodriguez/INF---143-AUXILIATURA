@@ -6,6 +6,10 @@ int n, suma; // tamaño del conjunto
 int v[N]; // conjunto;
 int nro_subconjuntos_validos;
 bool estado[N]; // mascara del conjunto (representa a un subconjunto)
+/*
+Complejidad: O(2 ^ n * n)  en tiempo
+Espacio: O(n)
+*/
 
 void subconjuntos(int i){
     if(i == n){
