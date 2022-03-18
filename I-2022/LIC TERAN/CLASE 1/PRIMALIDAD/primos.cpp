@@ -35,7 +35,23 @@ void solve(){
     
 
     
-    
+    // T(n) = 3 * n + 4
+    /*
+        T(n) = 3 * n + 4
+        O(T(n)) = 3 * n
+        O(T(n)) = n  (Complejidad Lineal)
+
+
+    */
+
+    ll n = INT_MAX;
+    cout << n << '\n';
+    cout << is_prime(n) << '\n';
+
+    // T(n) = 2 * n ^ 2 + n + 1
+    // O(T(n)) = 2 * n ^ 2
+    // O(T(n)) = n ^ 2
+
 }   
 
 
