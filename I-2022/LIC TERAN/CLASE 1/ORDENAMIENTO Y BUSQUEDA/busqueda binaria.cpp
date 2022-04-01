@@ -36,6 +36,7 @@ int main(){
 
     int a = 0, b = n, mid;
 
+    // O(log_2 n)
     while(b - a > 1){ 
         mid = (a + b) / 2;
         if(A[mid] <= x)
